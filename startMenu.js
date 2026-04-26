@@ -1,6 +1,5 @@
 let playerCount = 0;
 
-
 function createPlayerInput() {
   const playerInput = document.createElement("input");
   playerInput.type = "text";
@@ -11,7 +10,8 @@ function addPlayer() {
   playerCount++;
   playerInput = createPlayerInput();
   playerInput.name = `player-${playerCount}`;
-  playerInput.placeholder = `Player ${playerCount}`;
+    playerInput.placeholder = `Player ${playerCount}`;
+    playerInput.value = `Player ${playerCount}`;
   players.appendChild(playerInput);
 }
 
