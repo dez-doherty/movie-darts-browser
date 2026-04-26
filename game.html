@@ -9,7 +9,12 @@
 </head>
 
 <body>
-    <table>
+    <h1>Highest Grossing Movies by writer John B</h1>
+
+    <button onclick="window.location.href='setup.html'">Back to setup</button>
+    <button onclick="window.location.href='endScreen.html'">End game</button>
+
+    <table class="scoreboard">
         <tr>
             <th>Player 1</th>
             <th>Player 2</th>
@@ -22,19 +27,33 @@
         </tr>
     </table>
 
-    <form>
-        <label for="fname">Movie</label><br>
-        <input type="text" value="" list="movies" />
-        <datalist id="movies">
-            <option value="Apple"></option>
-            <option value="Orange"></option>
-            <option value="Peach"></option>
-            <option value="Melon"></option>
-            <option value="Strawberry"></option>
-        </datalist>
-        <input type="submit" value="Submit">
-    </form>
+    <div>
+        <p>Player 1's turn</p>
+
+        <form class="guessInput">
+            <label for="movie">Movie</label><br>
+            <input type="text" id="movie" value="" list="movies" />
+
+            <datalist id="movies">
+                <option value="Apple"></option>
+                <option value="Orange"></option>
+                <option value="Peach"></option>
+                <option value="Melon"></option>
+                <option value="Strawberry"></option>
+            </datalist>
+            <input type="submit" value="Submit">
+        </form>
+
+        <button>Skip turn</button>
+        <button>Drop out</button>
+    </div>
+
+    <div>
+        <p>Movie scored 50 points</p>
+        <p>Player 1 now has 501 points</p>
+    </div>
 </body>
+
 <script src="game.js"></script>
 
 </html>
